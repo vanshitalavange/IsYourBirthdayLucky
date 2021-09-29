@@ -5,9 +5,11 @@ const outputBox = document.querySelector('#output-box');
 
 function compareValues(sum, luckyNumber) {
   if (sum % luckyNumber === 0) {
+     outputBox.style.color = "black";
     outputBox.textContent = "Your birthday is lucky 😍";
   }
   else {
+     outputBox.style.color = "black";
     outputBox.textContent = "Your birthday is not lucky 😭";
   }
 }
