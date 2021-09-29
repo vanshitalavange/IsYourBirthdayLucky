@@ -14,15 +14,15 @@ function compareValues(sum, luckyNumber) {
 }
 
 function checkBirthDateIsLucky() {
-  const dob = dateOfBirth.value;
-  const sum = calculateSum(dob);
-  if (dob && sum) {
 
-    compareValues(sum, luckyNumber.value);
-  }
-  else {
+  const dob = dateOfBirth.value;
+  if (dob == "" || luckyNumber.value == "") {
     outputBox.style.color = "red";
     outputBox.textContent = "Both the fields are mandatory 😠";
+  }
+  else {
+    const sum = calculateSum(dob);
+    compareValues(sum, luckyNumber.value);
   }
 }
 
