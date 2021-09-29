@@ -5,7 +5,6 @@ const outputBox = document.querySelector('#output-box');
 
 function compareValues(sum, luckyNumber) {
   if (sum % luckyNumber === 0) {
-
     outputBox.textContent = "Your birthday is lucky 😍";
   }
   else {
@@ -21,6 +20,7 @@ function checkBirthDateIsLucky() {
     outputBox.textContent = "Both the fields are mandatory 😠";
   }
   else if(Number(luckyNumber.value)===0){
+    outputBox.style.color = "red";
      outputBox.textContent = "Value cannot be zero"; 
   }
   else {
