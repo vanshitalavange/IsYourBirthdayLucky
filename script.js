@@ -20,6 +20,9 @@ function checkBirthDateIsLucky() {
     outputBox.style.color = "red";
     outputBox.textContent = "Both the fields are mandatory 😠";
   }
+  else if(Number(luckyNumber.value)===0){
+     outputBox.textContent = "Value cannot be zero"; 
+  }
   else {
     const sum = calculateSum(dob);
     compareValues(sum, luckyNumber.value);
